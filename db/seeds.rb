@@ -15,6 +15,6 @@ response = RestClient.get(URL)
 
 json = JSON.parse(response.body, symbolize_names: true)
 json[:drinks].each do |drink|
-  Ingredient.create(name: drink[:strIngredient1])
+  Ingredient.create!(name: drink[:strIngredient1])
 end 
 
